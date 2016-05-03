@@ -9,9 +9,9 @@ void main() {
         int count;
 
         if ((fin = open("foo", O_RDONLY)) < 0) {
-                        perror("foo");
-                        exit(1);
-                        }
+                perror("foo");
+                exit(1);
+        }
         if ((fout = open("bar", O_WRONLY | O_CREAT, 0644)) < 0) {
                 perror("bar");
                 exit(2);
